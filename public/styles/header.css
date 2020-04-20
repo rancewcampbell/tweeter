@@ -1,0 +1,25 @@
+/* The header should have a height of 400px and be 100% the width of it's parent container
+The avatar should be centered vertically and horizontally (Hint: you may have to play around with position: relative and position: absolute to properly position the avatar)
+The name should be centered below the avatar
+The background should be a different colour than the nav and the body */
+
+header {
+  margin-top: 50px;
+  height: 400px;
+  width: 100%;
+  background-color: #7780a1;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+header div {
+  width: 100%;
+  text-align: center;
+}
+
+header div img {
+  padding-top: 2.5em;
+}
+
+header div h2 {
+  margin: 0;
+}
