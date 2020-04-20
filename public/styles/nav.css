@@ -11,5 +11,18 @@ The <span> within the <nav> has Bungee as it's default font-family
 The inner content should not be touching the viewport edge on any side and should remain 1.5ems away from all edges */
 
 nav {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  z-index: 9999;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+nav span {
+  position: absolute;
   font-family: 'Bungee';
+  margin: 1.5em;
+  
 }
