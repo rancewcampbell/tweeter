@@ -2,21 +2,21 @@
 Styles for Navbar
 */
 nav {
-  position: fixed;
-  height: 100px;
-  width: 100%;
-  z-index: 9999;
   background-color: #4056A1;
   color: #FFFFFF;
-  margin-bottom: 20px;
-  top: 0;
   font-size: 2em;
+  height: 100px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 nav span {
-  position: absolute;
   font-family: 'Bungee';
   margin: 1.5rem;
+  position: absolute;
   
 }
 

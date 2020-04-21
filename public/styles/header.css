@@ -2,16 +2,16 @@
 Styles for Header
  */
 header.user {
-  margin-top: 50px;
-  height: 400px;
-  width: 100%;
   background-color: #7780a1;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  height: 400px;
+  margin-top: 50px;
+  width: 100%;
 }
 
 header.user div {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 header.user div img {
