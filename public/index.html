@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="/styles/new_tweet.css">
 
+    <link rel="stylesheet" href="/styles/tweets.css">
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -32,7 +34,7 @@
       <span><a href="/">tweeter</a></span>
     </nav>
 
-    <header>
+    <header class="user">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -53,6 +55,19 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
       </section>
+
+      <article class="tweet">
+        <header>
+          <img src="/images/profile-hex.png" alt="profile-picture">
+          <p>Beth Smith</p>
+          <p class="handle">@Bethsmith</p>
+        </header>
+        <p class="tweet-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <footer>
+          <p>10 days ago</p>
+        </footer>
+      </article>
+      
     </main>
   </body>
 </html>

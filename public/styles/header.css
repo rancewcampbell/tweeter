@@ -1,7 +1,7 @@
 /* 
 Styles for Header
  */
-header {
+header.user {
   margin-top: 50px;
   height: 400px;
   width: 100%;
@@ -9,15 +9,15 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
-header div {
+header.user div {
   width: 100%;
   text-align: center;
 }
 
-header div img {
+header.user div img {
   padding-top: 2.5em;
 }
 
-header div h2 {
+header.user div h2 {
   margin: 0;
 }

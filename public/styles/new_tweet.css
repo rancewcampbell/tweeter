@@ -9,6 +9,7 @@ New Tweet input styles
   font-family: 'Source Sans Pro';
   font-weight: 600;
   max-width: 800px;
+  margin-bottom: 4em;
 }
 
 .new-tweet h2 {
