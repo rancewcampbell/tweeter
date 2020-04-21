@@ -10,11 +10,17 @@ nav {
   color: #FFFFFF;
   margin-bottom: 20px;
   top: 0;
+  font-size: 2em;
 }
 
 nav span {
   position: absolute;
   font-family: 'Bungee';
-  margin: 1.5em;
+  margin: 1.5rem;
   
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
