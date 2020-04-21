@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="/styles/header.css">
 
+    <link rel="stylesheet" href="/styles/new_tweet.css">
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -41,7 +43,19 @@
     <!-- Page-specific (main) content here -->
     
     <main class="container">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet adipisci commodi labore asperiores repellendus quidem, nesciunt nulla. Quisquam, adipisci error at modi quam minus quos itaque doloribus ducimus numquam iste dolorem recusandae veniam animi cumque quae odio asperiores saepe reprehenderit accusantium quod facilis velit? Impedit, veritatis deserunt quod inventore tenetur laborum recusandae animi, totam nulla eaque rerum accusamus velit magnam sed esse illo eligendi atque, vitae voluptatem sunt. Dolores error eveniet esse eum. Esse quis doloremque aliquid sequi inventore dignissimos, commodi distinctio fuga maiores, molestiae quasi eligendi quas repudiandae dolor neque. Eligendi, commodi dolore, labore nisi iste officiis repellendus vero cumque dolorem quia ex dignissimos sint iusto dolores rem sunt et autem perferendis laboriosam inventore consequatur illo minus nobis. Qui architecto sequi, quisquam a sit maiores alias exercitationem rerum quam maxime consectetur deserunt ullam nihil atque adipisci odit voluptate sint repudiandae iste iure similique! Placeat excepturi libero maxime necessitatibus asperiores voluptatibus sequi commodi mollitia quaerat eligendi, odit suscipit exercitationem soluta autem impedit facere vero dolor harum dolorem cum quo, ipsam eaque deleniti. Perferendis dicta molestias velit eligendi odio nulla, similique exercitationem libero quis possimus dolor quisquam, architecto nisi nihil asperiores laborum quam eum? Minima voluptatibus recusandae magni autem dolorem fugit corrupti ea velit, totam nesciunt minus corporis expedita perferendis atque ullam ipsa? Blanditiis molestiae laborum officiis voluptatum. Ex voluptates beatae commodi asperiores magnam vero ratione, ipsa illum rem autem suscipit fugiat nostrum, numquam, alias iure nemo dolorem architecto esse quas? Velit, cum! Impedit tempora deserunt ex inventore cumque nostrum. Nisi quod quam obcaecati nihil neque numquam nobis expedita, culpa consequuntur optio dolores? Aut doloribus dolorem consectetur dolor quam tempore possimus suscipit placeat, obcaecati earum, optio odio itaque consequatur, labore eligendi eos qui nulla. Laborum at suscipit quos ipsa corrupti alias magnam, minus ratione nisi repudiandae atque tenetur excepturi blanditiis quasi laboriosam modi repellendus et nostrum debitis esse porro possimus recusandae enim nihil! Voluptatem laboriosam itaque consequatur, error mollitia qui quibusdam fugit maxime dignissimos totam provident fuga fugiat odit enim debitis quidem voluptate tempore soluta voluptatibus officia alias. Sed accusamus eaque deleniti provident voluptatibus repellat assumenda iusto tenetur, veniam quam molestias, magnam quasi obcaecati, repudiandae ab hic? Quisquam, qui? Sequi quod amet possimus, obcaecati debitis delectus adipisci, doloribus consectetur nemo cumque quo minus repellendus distinctio dolorum vitae excepturi animi vel, nihil inventore praesentium quas est esse blanditiis sit. Voluptatibus fugit accusantium quaerat inventore ullam. Maiores corrupti iste neque in laborum. Recusandae illo et aliquid dolor blanditiis debitis distinctio dolorem cumque numquam ullam, labore officia modi est error omnis nobis similique. Quo, alias! Dolorum et, commodi eaque fugiat debitis nisi porro nulla! Alias laboriosam aliquam accusamus ipsum ratione voluptatibus labore atque laborum voluptas maxime. Maiores voluptatum temporibus tempora odio, quaerat omnis odit quam modi expedita? Minus incidunt, vero dignissimos delectus odit voluptas laboriosam molestias esse quod, aspernatur saepe sequi beatae molestiae placeat voluptates aut voluptatem autem velit. Libero accusantium ullam aperiam neque porro animi quo eos aut ducimus. Optio beatae numquam aspernatur maiores inventore facere, fuga sapiente doloribus. Repellat, cumque inventore.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets/">
+          <div id="tweet-box">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text" maxlength="140" wrap="hard"></textarea>  
+          </div>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
