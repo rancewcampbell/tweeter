@@ -47,3 +47,7 @@ New Tweet input styles
   float: right;
   font-family: 'Bungee';
 }
+
+.error {
+  color: #ff0000;
+}
