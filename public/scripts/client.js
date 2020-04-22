@@ -41,9 +41,9 @@ $(document).ready(() => {
     event.preventDefault();
     const tweetLength = $(this).children('textarea')[0].value.length;
     if (!tweetLength) {
-      alert("You didn't enter anything.");
+      errorAppear("You didn't enter anything!")
     } else if (tweetLength > 140) {
-      alert("You tweet is over the 140 character limit");
+      errorAppear('That tweet is way too long! Keep it below 140 characters please :)')
     } else {
       const data = $(this).serialize();
       $.post('/tweets', data)
@@ -52,6 +52,7 @@ $(document).ready(() => {
   });
   
   const loadTweets = function() {
+    $('#error-message').css('display', 'none');
     $.get('/tweets')
     .then(renderTweets)
   };
@@ -62,6 +63,11 @@ $(document).ready(() => {
     return div.innerHTML;
   }
   
+  const errorAppear = function(message) {
+    $('#error-message').text(message)
+    $('#error-message').css('display', 'block')
+  }
+
   loadTweets();
-  
+
 });
