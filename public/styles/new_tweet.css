@@ -23,17 +23,17 @@ New Tweet input styles
 }
 
 .new-tweet button {
-  background-color: #4056A1;
   border: 3px solid #4056A1;
   border-radius: 3px;
+  background-color: #4056A1;
   color: #ffffff;
   font-family: 'Bungee';
 }
 
 .new-tweet button:hover {
+  border: 3px solid #4056A1;
   background-color: #f4f1ec;
   color: #4056A1;
-  border: 3px solid #4056A1;
 }
 
 .new-tweet output {
