@@ -20,12 +20,7 @@
 
     <link rel="stylesheet" href="/styles/tweets.css">
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+    
   </head>
 
   <body>
@@ -51,23 +46,31 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
       </section>
-
-      <article class="tweet">
-        <header>
-          <img src="/images/profile-hex.png" alt="profile-picture">
-          <p>Beth Smith</p>
-          <p class="handle">@Bethsmith</p>
-        </header>
-        <p class="tweet-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <footer>
-          <p>10 days ago</p>
-          <div>
-            <img src="/images/flag.png" alt="flag tweet">
-            <img src="/images/retweet.png" alt="repost">
-            <img src="/images/heart.png" alt="like tweet">
-          </div>
-        </footer>
-      </article>
+      <section id="tweets-container">
+        <article class="tweet">
+          <header>
+            <img src="/images/profile-hex.png" alt="profile-picture">
+            <p>Beth Smith</p>
+            <p class="handle">@Bethsmith</p>
+          </header>
+          <p class="tweet-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <footer>
+            <p>10 days ago</p>
+            <div>
+              <img src="/images/flag.png" alt="flag tweet">
+              <img src="/images/retweet.png" alt="repost">
+              <img src="/images/heart.png" alt="like tweet">
+            </div>
+          </footer>
+        </article>
+      </section>
+      
     </main>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </body>
 </html>
