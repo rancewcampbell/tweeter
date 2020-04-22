@@ -64,3 +64,11 @@ const data = [
 
 
 renderTweets(data);
+
+$('#tweet-form').submit(function(event) {
+  event.preventDefault();
+  const data = $(this).serialize();
+  $.post('/tweets', data)
+  .then(console.log('Success'))
+});
+
