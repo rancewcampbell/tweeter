@@ -1,13 +1,12 @@
-:root {
-  --primary-black: #000000
-}
-
+/*
+Styles for tweet container
+*/
 .tweet {
   position: relative;
   width: 75%;
   max-width: 800px;
   margin: 10px auto;
-  border: 4px solid var(--primary-black);
+  border: 4px solid #000000;
   opacity: 0.7;
 }
 
@@ -26,7 +25,6 @@
 }
 
 .tweet header img {
-  display: inline-block;
   width: 50px;
 }
 
@@ -40,27 +38,27 @@
 }
 
 .tweet header .handle {
+  position: absolute;
+  right: 20px;
   font-style: italic;
   font-weight: 300;
   opacity: 0.6;
-  position: absolute;
-  right: 20px;
   visibility: hidden;
 }
 
 .tweet .tweet-body {
-  border-bottom: 4px solid var(--primary-black);
-  font-size: 0.8em;
+  padding: 10px;
   margin: 10px;
   margin-bottom: 0;
-  padding: 10px;
+  border-bottom: 4px solid #000000;
+  font-size: 0.8em;
 }
 
 .tweet footer p {
   display: inline-block;
-  font-size: 0.6em;
-  margin: 0 10px;
   padding: 10px;
+  margin: 0 10px;
+  font-size: 0.6em;
 }
 
 .tweet footer div {
