@@ -6,6 +6,8 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 const createTweetElement = function(tweetObj) {
+  const date = new Date(tweetObj.created_at)
+  const time = date.toLocaleTimeString();
   const tweetTemplate = `
     <article class="tweet">
       <header>
@@ -15,7 +17,7 @@ const createTweetElement = function(tweetObj) {
       </header>
       <p class="tweet-body">${tweetObj.content.text}</p>
       <footer>
-        <p>${tweetObj.created_at}</p>
+        <p>${date.toDateString()}, ${time}</p>
         <div>
           <img src="/images/flag.png" alt="flag tweet">
           <img src="/images/retweet.png" alt="repost">
