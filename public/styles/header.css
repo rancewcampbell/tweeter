@@ -1,23 +1,20 @@
 /* 
 Styles for Header
  */
-header.user {
+.user {
   background-color: #7780a1;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  height: 400px;
-  margin-top: 50px;
+  height: 330px;
+  margin-top: 80px;
   width: 100%;
-}
-
-header.user div {
   text-align: center;
-  width: 100%;
 }
 
-header.user div img {
-  padding-top: 2.5em;
+.user img {
+  margin: 5px;
 }
 
-header.user div h2 {
-  margin: 0;
+.user h2 {
+  font-size: 2em;
+  margin: 5px;
 }

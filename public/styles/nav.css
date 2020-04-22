@@ -3,10 +3,10 @@ Styles for Navbar
 */
 nav {
   background-color: #4056A1;
-  color: #FFFFFF;
-  font-size: 2em;
-  height: 100px;
-  margin-bottom: 20px;
+  /* color: #FFFFFF; */
+  font-size: 1.5em;
+  height: 80px;
+  /* margin-bottom: 20px; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -14,13 +14,14 @@ nav {
 }
 
 nav span {
-  font-family: 'Bungee';
-  margin: 1.5rem;
   position: absolute;
-  
+  font-family: 'Bungee';
+  margin: 22px;
+  color: #ffffff;
 }
-
+/* 
 nav a {
+  vertical-align: sub;
   color: #FFFFFF;
   text-decoration: none;
-}
+} */

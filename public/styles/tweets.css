@@ -1,63 +1,75 @@
-
-article.tweet {
-  border: 2px solid #000000;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
-  opacity: 0.7;
-  position: relative;
-  width: 75%;
+:root {
+  --primary-black: #000000
 }
 
-article.tweet:hover {
-  box-shadow: 5px 5px 5px 5px #7780a1;
+.tweet {
+  position: relative;
+  width: 75%;
+  max-width: 800px;
+  margin: 10px auto;
+  border: 4px solid var(--primary-black);
+  opacity: 0.7;
+}
+
+.tweet:hover {
+  box-shadow: 3px 3px 3px 0px #7780a1;
   opacity: 1;
 }
 
-article.tweet:hover .handle {
+.tweet:hover .handle {
   visibility: visible;
 }
 
-article.tweet header {
+.tweet header {
   height: 50px;
   margin: 10px;
 }
 
-article.tweet header img {
+.tweet header img {
   display: inline-block;
   width: 50px;
 }
 
-article.tweet header p {
+.tweet header p {
+  display: inline-block;
   vertical-align: top;
   height: 50px;
-  display: inline-block;
   margin: 0;
   line-height: 50px;
   font-weight: 600;
 }
 
-article.tweet header p.handle {
+.tweet header .handle {
   font-style: italic;
   font-weight: 300;
   opacity: 0.6;
   position: absolute;
-  right: 10px;
+  right: 20px;
   visibility: hidden;
 }
 
-
-article.tweet p.tweet-body {
-  border-bottom: 3px solid #000000;
+.tweet .tweet-body {
+  border-bottom: 4px solid var(--primary-black);
   font-size: 0.8em;
   margin: 10px;
   margin-bottom: 0;
   padding: 10px;
 }
 
-article.tweet footer p {
-  border: none;
-  font-size: 0.5em;
+.tweet footer p {
+  display: inline-block;
+  font-size: 0.6em;
   margin: 0 10px;
   padding: 10px;
+}
+
+.tweet footer div {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+
+.tweet footer img {
+  width: 15px;
+  vertical-align: middle;
 }

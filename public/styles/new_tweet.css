@@ -2,10 +2,10 @@
 New Tweet input styles
 */
 .new-tweet {
-  font-weight: 600;
-  margin: 0 auto 4em auto;
-  max-width: 800px;
   width: 75%;
+  max-width: 800px;
+  margin: 40px auto;
+  font-weight: 700;
 }
 
 .new-tweet h2 {
@@ -13,31 +13,27 @@ New Tweet input styles
 }
 
 .new-tweet textarea {
-  background-color: #f4f1ec;
+  width: 100%;
   border: none;
   border-bottom: 2px solid #000000;
-  font-size: 0.8em;
-  height: 1.5em;
-  overflow: hidden;
-  outline: none;
-  padding-bottom: 2em;
   resize: none;
-  width: 100%;
+  outline: none;
+  background-color: #f4f1ec;
+  font-size: 0.8em;
 }
 
 .new-tweet button {
   background-color: #4056A1;
-  border: 1px solid #000000;
+  border: 3px solid #4056A1;
   border-radius: 3px;
   color: #ffffff;
-  float: left;
   font-family: 'Bungee';
 }
 
 .new-tweet button:hover {
   background-color: #f4f1ec;
   color: #4056A1;
-  border: 1px solid #4056A1;
+  border: 3px solid #4056A1;
 }
 
 .new-tweet output {
