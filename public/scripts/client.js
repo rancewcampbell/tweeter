@@ -3,57 +3,65 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+$(document).ready(() => {
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const createTweetElement = function(tweetObj) {
-  const date = new Date(tweetObj.created_at)
-  const time = date.toLocaleTimeString();
-  const tweetTemplate = `
-    <article class="tweet">
-      <header>
-        <img src="${tweetObj.user.avatars}" alt="profile-picture">
-        <p>${tweetObj.user.name}</p>
-        <p class="handle">${tweetObj.user.handle}</p>
-      </header>
-      <p class="tweet-body">${tweetObj.content.text}</p>
-      <footer>
-        <p>${date.toDateString()}, ${time}</p>
-        <div>
-          <img src="/images/flag.png" alt="flag tweet">
-          <img src="/images/retweet.png" alt="repost">
-          <img src="/images/heart.png" alt="like tweet">
-        </div>
-      </footer>
-    </article>
-  `
-  return tweetTemplate;
-}
-
-const renderTweets = function(tweetsArray) {
-  $('#tweets-container').empty()
-  for (const tweet of tweetsArray) {
-    const $newTweet = createTweetElement(tweet)
-    $('#tweets-container').append($newTweet);
+  const createTweetElement = function(tweetObj) {
+    const date = new Date(tweetObj.created_at)
+    const time = date.toLocaleTimeString();
+    const tweetTemplate = `
+      <article class="tweet">
+        <header>
+          <img src="${tweetObj.user.avatars}" alt="profile-picture">
+          <p>${tweetObj.user.name}</p>
+          <p class="handle">${tweetObj.user.handle}</p>
+        </header>
+        <p class="tweet-body">${escape(tweetObj.content.text)}</p>
+        <footer>
+          <p>${date.toDateString()}, ${time}</p>
+          <div>
+            <img src="/images/flag.png" alt="flag tweet">
+            <img src="/images/retweet.png" alt="repost">
+            <img src="/images/heart.png" alt="like tweet">
+          </div>
+        </footer>
+      </article>
+    `
+    return tweetTemplate;
   }
-}
-
-$('#tweet-form').submit(function(event) {
-  event.preventDefault();
-  const tweetLength = $(this).children('textarea')[0].value.length;
-  if (!tweetLength) {
-    alert("You didn't enter anything.");
-  } else if (tweetLength > 140) {
-    alert("You tweet is over the 140 character limit");
-  } else {
-    const data = $(this).serialize();
-    $.post('/tweets', data)
-    .then(console.log('Success'))
+  
+  const renderTweets = function(tweetsArray) {
+    $('#tweets-container').empty()
+    for (const tweet of tweetsArray.reverse()) {
+      const $newTweet = createTweetElement(tweet)
+      $('#tweets-container').append($newTweet);
+    }
   }
+  
+  $('#tweet-form').submit(function(event) {
+    event.preventDefault();
+    const tweetLength = $(this).children('textarea')[0].value.length;
+    if (!tweetLength) {
+      alert("You didn't enter anything.");
+    } else if (tweetLength > 140) {
+      alert("You tweet is over the 140 character limit");
+    } else {
+      const data = $(this).serialize();
+      $.post('/tweets', data)
+      .then(loadTweets())
+    }
+  });
+  
+  const loadTweets = function() {
+    $.get('/tweets')
+    .then(renderTweets)
+  };
+  
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  
+  loadTweets();
+  
 });
-
-const loadTweets = function() {
-  $.get('/tweets')
-  .then(renderTweets)
-};
-
-loadTweets();
