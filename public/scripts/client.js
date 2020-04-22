@@ -36,39 +36,24 @@ const renderTweets = function(tweetsArray) {
     $('#tweets-container').append($newTweet);
   }
 }
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
-renderTweets(data);
 
 $('#tweet-form').submit(function(event) {
   event.preventDefault();
-  const data = $(this).serialize();
-  $.post('/tweets', data)
-  .then(console.log('Success'))
+  const tweetLength = $(this).children('textarea')[0].value.length;
+  if (!tweetLength) {
+    alert("You didn't enter anything.");
+  } else if (tweetLength > 140) {
+    alert("You tweet is over the 140 character limit");
+  } else {
+    const data = $(this).serialize();
+    $.post('/tweets', data)
+    .then(console.log('Success'))
+  }
 });
 
+const loadTweets = function() {
+  $.get('/tweets')
+  .then(renderTweets)
+};
+
+loadTweets();
