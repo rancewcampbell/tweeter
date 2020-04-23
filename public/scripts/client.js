@@ -52,7 +52,7 @@ $(document).ready(() => {
   });
   
   const loadTweets = function() {
-    $('#error-message').css('display', 'none');
+    $('#error-message').slideUp(200);
     $.get('/tweets')
     .then(renderTweets)
   };
@@ -64,8 +64,8 @@ $(document).ready(() => {
   }
   
   const errorAppear = function(message) {
+    $('#error-message').slideDown(200);
     $('#error-message').text(message)
-    $('#error-message').css('display', 'block')
   }
 
   loadTweets();
