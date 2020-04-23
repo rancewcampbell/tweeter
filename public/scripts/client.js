@@ -63,6 +63,7 @@ $(document).ready(() => {
       $.post('/tweets', data)
       .then(loadTweets)
       textArea.value = '';
+      $('.counter').val('140');
     }
   });
   
