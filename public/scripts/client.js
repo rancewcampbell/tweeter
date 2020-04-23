@@ -29,7 +29,7 @@ $(document).ready(() => {
     return tweetTemplate;
   }
       
-  const escape =  function(str) {
+  const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -69,11 +69,5 @@ $(document).ready(() => {
     $('#error-message').text(message)
   }
 
-  $('nav button').click(function() {
-    $('.new-tweet').slideToggle(750);
-    $('.new-tweet textarea').focus();
-  });
-
   loadTweets();
-
 });
