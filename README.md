@@ -16,6 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
+## Final Product
 
 !["Tweeter Profile Header"](https://github.com/rancewcampbell/tweeter/blob/master/docs/profile-header.png?raw=true)
 
