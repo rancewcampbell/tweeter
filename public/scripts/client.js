@@ -52,7 +52,8 @@ $(document).ready(() => {
   // post tweet to server
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
-    const tweetLength = $(this).children('textarea')[0].value.length;
+    const textArea = $(this).children('textarea')[0];
+    const tweetLength = textArea.value.length;
     if (!tweetLength) {
       errorAppear("You didn't enter anything!")
     } else if (tweetLength > 140) {
@@ -61,6 +62,7 @@ $(document).ready(() => {
       const data = $(this).serialize();
       $.post('/tweets', data)
       .then(loadTweets)
+      textArea.value = '';
     }
   });
   
