@@ -28,7 +28,13 @@ $(document).ready(() => {
     `
     return tweetTemplate;
   }
-  
+      
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const renderTweets = function(tweetsArray) {
     $('#tweets-container').empty()
     for (const tweet of tweetsArray.reverse()) {
@@ -37,6 +43,13 @@ $(document).ready(() => {
     }
   }
   
+  const loadTweets = function() {
+    $('#error-message').slideUp(200);
+    $.get('/tweets')
+    .then(renderTweets)
+  };
+
+  // post tweet to server
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
     const tweetLength = $(this).children('textarea')[0].value.length;
@@ -51,18 +64,6 @@ $(document).ready(() => {
     }
   });
   
-  const loadTweets = function() {
-    $('#error-message').slideUp(200);
-    $.get('/tweets')
-    .then(renderTweets)
-  };
-  
-  const escape =  function(str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-  
   const errorAppear = function(message) {
     $('#error-message').slideDown(200);
     $('#error-message').text(message)
@@ -71,20 +72,6 @@ $(document).ready(() => {
   $('nav button').click(function() {
     $('.new-tweet').slideToggle(750);
     $('.new-tweet textarea').focus();
-  });
-
-  $(window).scroll(function() {
-    var height = $(window).scrollTop();
-    if (height > 50) {
-        $('#scroll-button').fadeIn(200);
-    } else {
-        $('#scroll-button').fadeOut(200);
-    }
-  });
-
-  $('#scroll-button').click(function(event) {
-    event.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
   loadTweets();
