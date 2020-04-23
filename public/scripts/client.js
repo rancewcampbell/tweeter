@@ -47,7 +47,7 @@ $(document).ready(() => {
     } else {
       const data = $(this).serialize();
       $.post('/tweets', data)
-      .then(loadTweets())
+      .then(loadTweets)
     }
   });
   
