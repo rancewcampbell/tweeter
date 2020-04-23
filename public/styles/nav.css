@@ -16,7 +16,6 @@ nav {
   height: 80px;
   top: 0;
   background-color: #4056A1;
-  
   z-index: 9999;
 }
 
@@ -39,6 +38,10 @@ nav button {
 
 nav button:hover {
   font-style: italic;
+}
+
+nav button:focus {
+  outline:0;
 }
 
 nav button img {

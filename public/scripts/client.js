@@ -68,6 +68,11 @@ $(document).ready(() => {
     $('#error-message').text(message)
   }
 
+  $('nav button').click(function() {
+    $('.new-tweet').slideToggle(750);
+    $('.new-tweet textarea').focus();
+  });
+
   loadTweets();
 
 });
