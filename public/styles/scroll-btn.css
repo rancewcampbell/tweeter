@@ -1,15 +1,14 @@
-/* footer {
-  position: sticky;
-  bottom: 100px;
-} */
+/* 
+button to scroll to top
+*/
 
 #scroll-button {
   display: none;
-  background-color: #ff0000;
-  border-radius: 50%;
   position: sticky;
   bottom: 1em;
   float: right;
+  border-radius: 50%;
+  background-color: #ff0000;
   opacity: 0.3;
 }
 
@@ -17,13 +16,10 @@
   opacity: 1;
 }
 
-#scroll-button:focus {
-  outline:0;
-}
 #scroll-button img {
   width: 50px;  
-  margin: 5px;
   vertical-align: middle;
+  margin: 5px;
   /* change color of arrow from black to white */
   filter: invert(93%) sepia(7%) saturate(27%) hue-rotate(294deg) brightness(104%) contrast(111%);
 }

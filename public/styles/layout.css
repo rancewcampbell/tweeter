@@ -29,6 +29,14 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/* 
+Breakpoint for Desktop view
+*/
+
+.error {
+  color: #ff0000;
+}
+
 @media only screen and (min-width: 1024px) {
   header.user {
     float: left;

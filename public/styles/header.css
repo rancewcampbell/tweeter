@@ -4,8 +4,6 @@ Styles for Header
 .user {
   background-color: #7780a1;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  height: 330px;
-  /* margin-top: 80px; */
   width: 100%;
   text-align: center;
 }
