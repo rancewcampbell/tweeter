@@ -1,0 +1,30 @@
+/* footer {
+  position: sticky;
+  bottom: 100px;
+} */
+
+#scroll-button {
+  display: none;
+  background-color: #ff0000;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 1em;
+  float: right;
+  opacity: 0.3;
+}
+
+#scroll-button:hover {
+  opacity: 1;
+}
+
+#scroll-button:focus {
+  outline:0;
+}
+#scroll-button img {
+  width: 50px;  
+  margin: 5px;
+  vertical-align: middle;
+  /* change color of arrow from black to white */
+  filter: invert(93%) sepia(7%) saturate(27%) hue-rotate(294deg) brightness(104%) contrast(111%);
+}
+
