@@ -1,11 +1,11 @@
 // scroll to top of page when scroll button clicked
 $(document).ready(() => {
   $(window).scroll(function() {
-    var height = $(window).scrollTop();
+    const height = $(window).scrollTop();
     if (height > 50) {
-        $('#scroll-button').fadeIn(200);
+      $('#scroll-button').fadeIn(200);
     } else {
-        $('#scroll-button').fadeOut(200);
+      $('#scroll-button').fadeOut(200);
     }
   });
   

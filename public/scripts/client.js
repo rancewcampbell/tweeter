@@ -6,7 +6,7 @@
 $(document).ready(() => {
 
   const createTweetElement = function(tweetObj) {
-    const date = new Date(tweetObj.created_at)
+    const date = new Date(tweetObj.created_at);
     const time = date.toLocaleTimeString();
     const tweetTemplate = `
       <article class="tweet">
@@ -25,28 +25,28 @@ $(document).ready(() => {
           </div>
         </footer>
       </article>
-    `
+    `;
     return tweetTemplate;
-  }
+  };
       
   const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const renderTweets = function(tweetsArray) {
-    $('#tweets-container').empty()
+    $('#tweets-container').empty();
     for (const tweet of tweetsArray.reverse()) {
-      const $newTweet = createTweetElement(tweet)
+      const $newTweet = createTweetElement(tweet);
       $('#tweets-container').append($newTweet);
     }
-  }
+  };
   
   const loadTweets = function() {
     $('#error-message').slideUp(200);
     $.get('/tweets')
-    .then(renderTweets)
+      .then(renderTweets);
   };
 
   // post tweet to server
@@ -55,13 +55,13 @@ $(document).ready(() => {
     const textArea = $('#tweet-text');
     const tweetLength = textArea.val().length;
     if (!tweetLength) {
-      errorAppear("You didn't enter anything!")
+      errorAppear("You didn't enter anything!");
     } else if (tweetLength > 140) {
-      errorAppear('That tweet is way too long! Keep it below 140 characters please :)')
+      errorAppear('That tweet is way too long! Keep it below 140 characters please :)');
     } else {
       const data = $(this).serialize();
       $.post('/tweets', data)
-      .then(loadTweets)
+        .then(loadTweets);
       textArea.val('');
       $('.counter').val('140');
     }
@@ -69,8 +69,8 @@ $(document).ready(() => {
   
   const errorAppear = function(message) {
     $('#error-message').slideDown(200);
-    $('#error-message').text(message)
-  }
+    $('#error-message').text(message);
+  };
 
   loadTweets();
 });
