@@ -45,7 +45,7 @@ Styles for tweet container
   margin: 0 10px;
   font-size: 0.6em;
 }
-.tweet footer footer div {
+.tweet footer div {
   display: inline-block;
   position: absolute;
   right: 20px;
