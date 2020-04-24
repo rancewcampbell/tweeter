@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["sass/layout.scss","sass/_base.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAQC;EACC;;;AAEF;EACE;;;AAGF;AAAA;AAAA;AAIA;EACE,kBCnBW;EDoBX,OCnBmB;EDoBnB;EACA,aCpBc;;;ADuBhB;EACE;EACA;;;AAEF;AAAA;AAAA;AAIA;AAAA;AAAA;AAIA;EACE;;;AAGF;EACE;IACE;IACA;IACA;IACA;;;EAEF;IACE;IACA;;;AAIH;EACE","file":"layout.css"}
