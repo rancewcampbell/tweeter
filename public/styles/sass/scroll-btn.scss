@@ -1,0 +1,28 @@
+/* 
+button to scroll to top
+*/
+
+@use 'base';
+
+#scroll-button {
+  display: none;
+  position: sticky;
+  bottom: 1em;
+  float: right;
+  border-radius: 50%;
+  background-color: base.$red;
+  opacity: 0.3;
+
+  img {
+    width: 50px;  
+    vertical-align: middle;
+    margin: 5px;
+    /* change color of arrow from black to white */
+    filter: base.$filter-white;
+  }
+  
+}
+
+#scroll-button:hover {
+  opacity: 1;
+}

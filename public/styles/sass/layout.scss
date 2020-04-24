@@ -37,7 +37,7 @@ Breakpoint for Desktop view
 */
 
 .error {
-  color: #ff0000;
+  color: base.$red;
 }
 
 @media only screen and (min-width: 1024px) {
