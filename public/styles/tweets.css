@@ -6,28 +6,23 @@ Styles for tweet container
   width: 75%;
   max-width: 800px;
   margin: 10px auto;
-  border: 4px solid #000000;
+  border: 3px solid #000000;
   opacity: 0.7;
 }
-
-.tweet:hover {
-  box-shadow: 3px 3px 3px 0px #7780a1;
-  opacity: 1;
+.tweet .tweet-body {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0;
+  border-bottom: 3px solid #000000;
+  font-size: 0.8em;
 }
-
-.tweet:hover .handle {
-  visibility: visible;
-}
-
 .tweet header {
   height: 50px;
   margin: 10px;
 }
-
 .tweet header img {
   width: 50px;
 }
-
 .tweet header p {
   display: inline-block;
   vertical-align: top;
@@ -36,7 +31,6 @@ Styles for tweet container
   line-height: 50px;
   font-weight: 600;
 }
-
 .tweet header .handle {
   position: absolute;
   right: 20px;
@@ -45,29 +39,28 @@ Styles for tweet container
   opacity: 0.6;
   visibility: hidden;
 }
-
-.tweet .tweet-body {
-  padding: 10px;
-  margin: 10px;
-  margin-bottom: 0;
-  border-bottom: 4px solid #000000;
-  font-size: 0.8em;
-}
-
 .tweet footer p {
   display: inline-block;
   padding: 10px;
   margin: 0 10px;
   font-size: 0.6em;
 }
-
-.tweet footer div {
+.tweet footer footer div {
   display: inline-block;
   position: absolute;
   right: 20px;
 }
-
 .tweet footer img {
   width: 15px;
   vertical-align: middle;
 }
+
+.tweet:hover {
+  box-shadow: 3px 3px 3px 0px #7780a1;
+  opacity: 1;
+}
+.tweet:hover .handle {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=tweets.css.map */
