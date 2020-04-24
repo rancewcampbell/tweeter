@@ -1,0 +1,58 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+@use 'base';
+
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  background-color: base.$body-color;
+  color: base.$primary-font-color;
+  font-size: 24px;
+  font-family: base.$primary-fonts;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+/* 
+Breakpoint for Desktop view
+*/
+
+.error {
+  color: base.$red;
+}
+
+@media only screen and (min-width: 1024px) {
+  header.user {
+    float: left;
+    width: 35%;
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+  .container {
+    float: right;
+    width: 60%;
+  }
+}
+
+ :focus {
+   outline: 0;
+ }

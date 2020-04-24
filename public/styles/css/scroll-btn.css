@@ -1,26 +1,25 @@
 /* 
 button to scroll to top
 */
-
 #scroll-button {
   display: none;
   position: sticky;
   bottom: 1em;
   float: right;
   border-radius: 50%;
-  background-color: #ff0000;
+  background-color: #cc0a0a;
   opacity: 0.3;
 }
-
-#scroll-button:hover {
-  opacity: 1;
-}
-
 #scroll-button img {
-  width: 50px;  
+  width: 50px;
   vertical-align: middle;
   margin: 5px;
   /* change color of arrow from black to white */
   filter: invert(93%) sepia(7%) saturate(27%) hue-rotate(294deg) brightness(104%) contrast(111%);
 }
 
+#scroll-button:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=scroll-btn.css.map */

@@ -1,0 +1,17 @@
+/* 
+Styles for Header
+ */
+.user {
+  background-color: #7780a1;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  width: 100%;
+  text-align: center;
+}
+.user img {
+  margin: 5px;
+}
+.user h2 {
+  margin: 5px;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,18 +1,21 @@
 /* 
 Styles for Header
  */
+@use 'base';
+
+$margin-val: 5px;
+
 .user {
-  background-color: #7780a1;
+  background-color: base.$secondary-color;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   width: 100%;
   text-align: center;
-}
 
-.user img {
-  margin: 5px;
-}
+  img {
+    margin: $margin-val;
+  }
 
-.user h2 {
-  margin: 5px;
-  font-size: 2em;
+  h2 {
+    margin: $margin-val;
+  }
 }
