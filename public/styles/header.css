@@ -7,14 +7,11 @@ Styles for Header
   width: 100%;
   text-align: center;
 }
-
 .user img {
   margin: 5px;
 }
-
 .user h2 {
   margin: 5px;
-  font-size: 2em;
 }
 
 /*# sourceMappingURL=header.css.map */
