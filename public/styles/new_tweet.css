@@ -8,11 +8,9 @@ New Tweet input styles
   margin: 40px auto;
   font-weight: 700;
 }
-
 .new-tweet h2 {
   text-align: center;
 }
-
 .new-tweet textarea {
   width: 100%;
   border: none;
@@ -22,24 +20,21 @@ New Tweet input styles
   background-color: #f4f1ec;
   font-size: 0.8em;
 }
-
 .new-tweet button {
   border: 3px solid #4056A1;
   border-radius: 3px;
   background-color: #4056A1;
   color: #ffffff;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
-
 .new-tweet button:hover {
   border: 3px solid #4056A1;
   background-color: #f4f1ec;
   color: #4056A1;
 }
-
 .new-tweet output {
   float: right;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
 
 #error-message {
@@ -48,3 +43,5 @@ New Tweet input styles
   border-radius: 3px;
   text-align: center;
 }
+
+/*# sourceMappingURL=new_tweet.css.map */

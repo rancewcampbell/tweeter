@@ -1,0 +1,55 @@
+/* 
+New Tweet input styles
+*/
+
+@use 'base';
+
+$btn-border: 3px solid base.$primary-color;
+
+.new-tweet {
+  display: none;
+  width: 75%;
+  max-width: 800px;
+  margin: 40px auto;
+  font-weight: 700;
+
+  h2 {
+    text-align: center;
+  }
+
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid base.$border-color;
+    resize: none;
+    outline: none;
+    background-color: base.$body-color;
+    font-size: 0.8em;
+  }
+
+  button {
+    border: $btn-border;
+    border-radius: 3px;
+    background-color: base.$primary-color;
+    color: base.$light-font-color;
+    font-family: base.$secondary-font;
+  }
+
+  button:hover {
+    border: $btn-border;
+    background-color: base.$body-color;
+    color: base.$primary-color;
+  }
+
+  output {
+    float: right;
+    font-family: base.$secondary-font;
+  }
+}
+
+#error-message {
+  display: none;
+  border: 3px solid #ff0000;
+  border-radius: 3px;
+  text-align: center;
+}
